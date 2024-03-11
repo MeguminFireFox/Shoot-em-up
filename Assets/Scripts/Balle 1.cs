@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Balle1 : MonoBehaviour
 {
-    private float speed = 5;
+    private float speed = 12;
 
     void FixedUpdate()
     {
