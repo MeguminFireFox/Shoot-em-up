@@ -6,25 +6,17 @@ using UnityEngine.InputSystem;
 public class Shoot : MonoBehaviour
 {
     public GameObject bullet;
-    private bool effective = false;
+    private bool _effective = false;
     private float currenttime = 0;
 
-    public void OnShoot(InputAction.CallbackContext context)
+    public void OnShoot(InputValue inputValue)
     {
-        if (context.performed)
-        {
-            effective = true;
-        }
-
-        if (context.canceled)
-        {
-            effective = false;
-        }
+        _effective = inputValue.isPressed;
     }
 
     private void FixedUpdate()
     {
-        if (effective == true)
+        if (_effective == true)
         {
             currenttime += Time.deltaTime;
             if (currenttime > 0.25f)
