@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Shoot : MonoBehaviour
 {
+    public Transform pointeur;
     public GameObject bullet;
     private bool _effective = false;
     private float currenttime = 0;
@@ -21,7 +22,7 @@ public class Shoot : MonoBehaviour
             currenttime += Time.deltaTime;
             if (currenttime > 0.25f)
             {
-                GameObject go = Instantiate(bullet, transform.position, transform.rotation);
+                GameObject go = Instantiate(bullet, pointeur.position, transform.rotation);
                 currenttime = 0;
             }
         }
