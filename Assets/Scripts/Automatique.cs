@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Shoot : MonoBehaviour
+public class Automatique : MonoBehaviour
 {
     public Transform pointeur;
     public GameObject bullet;
