@@ -1,18 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WeaponManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject Joueur;
+    public GameObject Automatique;
+    public GameObject Shotgun;
+    public GameObject Explosif;
+    
+    private int SwitchWeaponnumber = 1;
+
+    public void OnSwitch(InputValue putValue)
     {
-        
+        if (putValue.isPressed == true)
+        {
+            SwitchWeaponnumber += 1;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         
+        if (SwitchWeaponnumber == 1)
+        {
+            Instantiate(Automatique, Joueur.transform);
+            SwitchWeaponnumber += 1;
+        }
+        
+        if (SwitchWeaponnumber == 3)
+        {
+            Destroy(GameObject.Find("Gun(Clone)"));
+            Instantiate(Shotgun, Joueur.transform, worldPositionStays: false);
+            SwitchWeaponnumber += 1;
+        }
+
+        if (SwitchWeaponnumber == 5)
+        {
+            DestroyImmediate(Shotgun, true);
+            Instantiate(Explosif, Joueur.transform, worldPositionStays: false);
+            SwitchWeaponnumber += 1;
+        }
+
+        if (SwitchWeaponnumber >= 7)
+        {
+            Destroy(GameObject.Find("Bombs(Clone)"));
+            SwitchWeaponnumber = 1;
+        }
     }
+
+
+
 }

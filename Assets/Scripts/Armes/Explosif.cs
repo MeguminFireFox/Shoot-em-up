@@ -20,7 +20,7 @@ public class Explosif : MonoBehaviour
         if (_effective == true)
         {
             currenttime += Time.deltaTime;
-            if (currenttime > 1f)
+            if (currenttime > 1.25f)
             {
                 GameObject go = Instantiate(bullet, pointeur.position, transform.rotation);
                 currenttime = 0;
