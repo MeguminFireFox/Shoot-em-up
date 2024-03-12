@@ -16,8 +16,8 @@ public class Balle3 : MonoBehaviour
     {
         if (other.gameObject.tag == "BulletWall")
         {
-            Destroy(gameObject);
             GameObject go = Instantiate(Explosion, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
     }
     

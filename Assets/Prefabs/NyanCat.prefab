@@ -98,7 +98,6 @@ GameObject:
   - component: {fileID: 1268623177688858128}
   - component: {fileID: 8696100858838747225}
   - component: {fileID: 8624132571990665786}
-  - component: {fileID: 964295902455014036}
   m_Layer: 0
   m_Name: NyanCat
   m_TagString: Player
@@ -324,17 +323,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48041bdcdfb3b19408e92b8f237e5b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &964295902455014036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8114124228681308325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5d1f90d362b7b4eb51fb016a563aa3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointeur: {fileID: 1353279340505710062}
-  bullet: {fileID: 8050239135103986368, guid: b086ee92438b10746bdbfd79b2fcfbcc, type: 3}
