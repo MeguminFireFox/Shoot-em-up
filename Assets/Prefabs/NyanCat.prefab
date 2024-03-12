@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: 1268623177688858128}
   - component: {fileID: 8696100858838747225}
   - component: {fileID: 8624132571990665786}
-  - component: {fileID: 2251673915702158781}
+  - component: {fileID: 964295902455014036}
   m_Layer: 0
-  m_Name: Square
+  m_Name: NyanCat
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: f4de06c3e6dc23c46b255ee846907d39, type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -277,7 +277,7 @@ MonoBehaviour:
     m_ActionName: Player/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2251673915702158781}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shoot, Assembly-CSharp
         m_MethodName: OnShoot
         m_Mode: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48041bdcdfb3b19408e92b8f237e5b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2251673915702158781
+--- !u!114 &964295902455014036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
