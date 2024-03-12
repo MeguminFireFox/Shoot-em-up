@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 8624132571990665786}
   - component: {fileID: 2251673915702158781}
   m_Layer: 0
-  m_Name: NyanCat
+  m_Name: Square
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: f4de06c3e6dc23c46b255ee846907d39, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
