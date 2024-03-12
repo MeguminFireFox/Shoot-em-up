@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 629815335}
+  - component: {fileID: 629815336}
   m_Layer: 0
   m_Name: Planet Manager
   m_TagString: Untagged
@@ -148,12 +149,28 @@ Transform:
   m_GameObject: {fileID: 629815334}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.075651, y: -1.4372642, z: -9.872716}
+  m_LocalPosition: {x: 22.075651, y: 0, z: -9.872716}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &629815336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629815334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0fd39aaf1e72a4eb6b760176bd5409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Planet1: {fileID: 5048227889726401884, guid: 9ae8b5f9c5a9603439aff6af0b8f0aa3, type: 3}
+  Planet2: {fileID: 8800994086804106041, guid: dd0b40d5a0ab3f74286f2c1244f8b110, type: 3}
+  Planet3: {fileID: 3641037249895397783, guid: 6712ee8ac12874d4b976f43fbbc4387f, type: 3}
+  zone: {x: 5, y: 20}
 --- !u!1 &1308384159
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,11 +480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7672374606511977674, guid: 6712ee8ac12874d4b976f43fbbc4387f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.8
+      value: 15.46
       objectReference: {fileID: 0}
     - target: {fileID: 7672374606511977674, guid: 6712ee8ac12874d4b976f43fbbc4387f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.96
+      value: 2.23
       objectReference: {fileID: 0}
     - target: {fileID: 7672374606511977674, guid: 6712ee8ac12874d4b976f43fbbc4387f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -573,11 +590,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7102583462068674673, guid: dd0b40d5a0ab3f74286f2c1244f8b110, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.87
+      value: 22.34
       objectReference: {fileID: 0}
     - target: {fileID: 7102583462068674673, guid: dd0b40d5a0ab3f74286f2c1244f8b110, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.57
+      value: -2.84
       objectReference: {fileID: 0}
     - target: {fileID: 7102583462068674673, guid: dd0b40d5a0ab3f74286f2c1244f8b110, type: 3}
       propertyPath: m_LocalPosition.z
