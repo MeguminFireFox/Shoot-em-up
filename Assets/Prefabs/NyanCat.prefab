@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78924462408142980}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.15, y: -0.029, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 345221734728150898}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2794201495458198040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 1268623177688858128}
   - component: {fileID: 8696100858838747225}
   - component: {fileID: 8624132571990665786}
+  - component: {fileID: 3461688067541511898}
   m_Layer: 0
   m_Name: NyanCat
   m_TagString: Player
@@ -323,3 +324,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48041bdcdfb3b19408e92b8f237e5b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3461688067541511898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114124228681308325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9ae4f4461dd1b48a6edf2d48b92020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bouclier: {fileID: 79487350961586860, guid: d4fded51fba5d8f498f5abd5cc8f103c, type: 3}
+  Joueur: {fileID: 8114124228681308325}
