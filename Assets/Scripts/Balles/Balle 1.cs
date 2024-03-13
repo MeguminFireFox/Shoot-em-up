@@ -5,6 +5,8 @@ using UnityEngine;
 public class Balle1 : MonoBehaviour
 {
     private float speed = 12;
+    public float dammage = 1;
+    Pelotte ennemie1;
 
     void FixedUpdate()
     {
@@ -15,6 +17,12 @@ public class Balle1 : MonoBehaviour
     {
         if (other.gameObject.tag == "BulletWall")
         {
+            Destroy(gameObject);
+        }
+
+        if (other.gameObject.tag == "Ennemie")
+        {
+            Debug.Log("3");
             Destroy(gameObject);
         }
     }

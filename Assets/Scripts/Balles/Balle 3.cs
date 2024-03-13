@@ -6,6 +6,7 @@ public class Balle3 : MonoBehaviour
 {
     public GameObject Explosion;
     private float speed = 10;
+    public float dammage = 3;
 
     void FixedUpdate()
     {

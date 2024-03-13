@@ -6,6 +6,7 @@ public class Explosion : MonoBehaviour
 {
     private int damage = 5;
     private float presenttime = 0;
+    public float dammage = 2;
 
     private void FixedUpdate()
     {

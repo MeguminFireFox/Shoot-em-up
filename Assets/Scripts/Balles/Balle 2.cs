@@ -6,6 +6,7 @@ public class Balle2 : MonoBehaviour
 {
     private float speed = 10;
     private float hauteur;
+    public float dammage = 2;
 
     void Start()
     {

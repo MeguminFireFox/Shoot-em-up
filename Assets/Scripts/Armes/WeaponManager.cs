@@ -38,7 +38,7 @@ public class WeaponManager : MonoBehaviour
 
         if (SwitchWeaponnumber == 5)
         {
-            DestroyImmediate(Shotgun, true);
+            Destroy(GameObject.Find("Shotgun(Clone)"));
             Instantiate(Explosif, Joueur.transform, worldPositionStays: false);
             SwitchWeaponnumber += 1;
         }
