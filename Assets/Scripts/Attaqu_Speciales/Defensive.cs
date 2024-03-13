@@ -53,7 +53,7 @@ public class Defensive : MonoBehaviour
             if (other.gameObject.tag == "Ennemie")
             {
                 _staytime = 0;
-                Destroy(GameObject.Find("Bouclier(Clone)"));
+                Destroy(GameObject.Find("Shield(Clone)"));
             }
 
             if (other.gameObject.tag == "EnnemieBullet")
