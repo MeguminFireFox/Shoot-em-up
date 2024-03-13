@@ -17,11 +17,17 @@ public class PV : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Pelotte pelotte = collision.GetComponent<Pelotte>();
-
+        Defensive defensive = GetComponent<Defensive>();
         if (pelotte != null)
         {
             Health -= pelotte.degat;
+            if (defensive.Shieldisup == false )
+            {
+                defensive.Hprotected -= pelotte.degat;
+            }
             Destroy(pelotte.gameObject);
+            Destroy(GameObject.Find("Shield(Clone)"));
+            Health = defensive.Hprotected;
         }
     }
 }

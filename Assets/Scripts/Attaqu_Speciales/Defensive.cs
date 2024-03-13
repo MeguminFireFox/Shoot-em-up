@@ -7,15 +7,23 @@ using UnityEngine.InputSystem;
 public class Defensive : MonoBehaviour
 {
     private bool _isprotected = false;
-    private bool _shieldisup = false;
+    public bool Shieldisup = false;
     private float _recharge = 0;
     private float _staytime = 0;
+    public float Hprotected;
     public GameObject Bouclier;
     public GameObject Joueur;
 
+    public void Start()
+    {
+        PV pv = GetComponent<PV>();
+        Hprotected = pv.Health;
+    }
     public void OnSpecial(InputValue inputValue)
     {
+        PV pv = GetComponent<PV>();
         _isprotected = inputValue.isPressed;
+        Hprotected = pv.Health;
     }
 
     private void FixedUpdate()
@@ -27,42 +35,24 @@ public class Defensive : MonoBehaviour
             if (_isprotected == true)
             {
                 _recharge -= _recharge;
-                _shieldisup = true;
+                Shieldisup = true;
                 Instantiate(Bouclier, Joueur.transform);
             }
         }
 
-        if (_shieldisup == true)
+        if (Shieldisup == true)
         {
             _staytime += Time.deltaTime;
         }
 
         if(_staytime >= 5)
         {
-            _shieldisup = false;
+
+            Shieldisup = false;
             _staytime = 0;
             Destroy(GameObject.Find("Shield(Clone)"));
         }
         
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (_isprotected == true)
-        {
-            if (other.gameObject.tag == "Ennemie")
-            {
-                _staytime = 0;
-                Destroy(GameObject.Find("Bouclier(Clone)"));
-            }
-
-            if (other.gameObject.tag == "EnnemieBullet")
-            {
-                _staytime = 0;
-                Destroy(GameObject.Find("Shield(Clone)"));
-            }
-        }
-
     }
 }
 
