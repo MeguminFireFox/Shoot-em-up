@@ -12,7 +12,7 @@ public class Explosion : MonoBehaviour
     {
         presenttime += Time.deltaTime;
 
-        if (presenttime >= 0.01f)
+        if (presenttime >= 0.2f)
         {
             Destroy(gameObject);
             presenttime = 0;
