@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2848649356109943882}
   - component: {fileID: 2956864217330391574}
   - component: {fileID: 2530477404977597203}
-  - component: {fileID: 2315661441377510136}
   - component: {fileID: 1125305754206306402}
+  - component: {fileID: 5240005492532478550}
   m_Layer: 0
   m_Name: Shotgunbullet1
   m_TagString: BulletPlayer
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -132,7 +132,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &2315661441377510136
+--- !u!114 &1125305754206306402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745455491764612058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5609c7bd5aa25f841b49a248fc069ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &5240005492532478550
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -159,16 +171,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1125305754206306402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8745455491764612058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5609c7bd5aa25f841b49a248fc069ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dammage: 2
