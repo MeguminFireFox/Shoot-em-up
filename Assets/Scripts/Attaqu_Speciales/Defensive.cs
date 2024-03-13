@@ -22,12 +22,11 @@ public class Defensive : MonoBehaviour
     {
         _recharge += Time.deltaTime;
         Debug.Log(_recharge);
-        if (_recharge >= 30)
+        if (_recharge >= 15)
         {
-            _recharge = 30;
             if (_isprotected == true)
             {
-                _recharge = 0;
+                _recharge -= _recharge;
                 _shieldisup = true;
                 Instantiate(Bouclier, Joueur.transform);
             }
