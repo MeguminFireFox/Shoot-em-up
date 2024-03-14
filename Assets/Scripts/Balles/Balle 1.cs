@@ -13,16 +13,10 @@ public class Balle1 : MonoBehaviour
         transform.Translate(Vector2.right * speed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "BulletWall")
         {
-            Destroy(gameObject);
-        }
-
-        if (other.gameObject.tag == "Ennemie")
-        {
-            Debug.Log("3");
             Destroy(gameObject);
         }
     }

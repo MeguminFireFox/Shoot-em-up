@@ -13,7 +13,7 @@ public class Balle3 : MonoBehaviour
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "BulletWall")
         {
