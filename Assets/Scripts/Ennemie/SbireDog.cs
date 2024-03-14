@@ -8,14 +8,13 @@ public class SbireDog : MonoBehaviour
     public float HP = 2;
     private float _speed = 6;
     public float Degat = 1;
-    private float _distance;
     private float _preptime;
     private float _angle;
     private bool _position = false;
     public GameObject Explos;
     public GameObject Joueur;
     private Vector2 _direction;
-    private Vector2 _emplacement;
+    public Rigidbody2D Rb2D;
 
     void FixedUpdate()
     {
@@ -35,15 +34,11 @@ public class SbireDog : MonoBehaviour
             _direction.Normalize();
             _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(Vector3.forward * _angle);
-
-            _emplacement = Joueur.transform.position;
-            
         }
 
-        if (_preptime >= 6)
+        if (_preptime >= 6 && _preptime<= 7)
         {
-            Debug.Log("hi");
-            transform.position = Vector2.MoveTowards(transform.position, _emplacement, _speed * Time.deltaTime);
+            Rb2D.AddForce(_direction * 0.5f,ForceMode2D.Impulse);
         }
 
         if (_preptime >= 10)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SbireDogBeta : MonoBehaviour
 {
     public float HP = 2;
-    private float _speed = 4;
+    private float _speed = 3;
     public float Degat = 1;
     private float _distance;
     public GameObject Explos;

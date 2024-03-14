@@ -18,6 +18,8 @@ public class PV : MonoBehaviour
     {
         Pelotte pelotte = collision.GetComponent<Pelotte>();
         Defensive defensive = GetComponent<Defensive>();
+        SbireDog sbireDog = collision.GetComponent<SbireDog>();
+        SbireDogBeta followerDog = collision.GetComponent<SbireDogBeta>();
         Bouledogue bouledogue = collision.GetComponent<Bouledogue>();
         Balleennemi1 balleennemi1 = collision.GetComponent<Balleennemi1>();
         
@@ -29,6 +31,30 @@ public class PV : MonoBehaviour
                 defensive.Hprotected -= pelotte.degat;
             }
             Destroy(pelotte.gameObject);
+            Destroy(GameObject.Find("Shield(Clone)"));
+            Health = defensive.Hprotected;
+        }
+
+        if (sbireDog != null)
+        {
+            Health -= sbireDog.Degat;
+            if (defensive.Shieldisup == false)
+            {
+                defensive.Hprotected -= sbireDog.Degat;
+            }
+            Destroy(sbireDog.gameObject);
+            Destroy(GameObject.Find("Shield(Clone)"));
+            Health = defensive.Hprotected;
+        }
+
+        if (followerDog != null)
+        {
+            Health -= followerDog.Degat;
+            if (defensive.Shieldisup == false)
+            {
+                defensive.Hprotected -= followerDog.Degat;
+            }
+            Destroy(followerDog.gameObject);
             Destroy(GameObject.Find("Shield(Clone)"));
             Health = defensive.Hprotected;
         }
