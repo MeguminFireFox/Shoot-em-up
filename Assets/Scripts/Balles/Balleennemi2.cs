@@ -5,14 +5,9 @@ using UnityEngine;
 public class Balleennemi2 : MonoBehaviour
 {
     private float _time = 0;
-    private float speed = 8;
-    public float Dammage;
+    private float speed = 7;
+    public float Dammage = 3;
     private bool selected;
-
-    void Start()
-    {
-        Dammage = 3;
-    }
 
     void FixedUpdate()
     {
@@ -20,12 +15,12 @@ public class Balleennemi2 : MonoBehaviour
         _time += Time.deltaTime;
         transform.Translate(Vector2.left * speed * Time.deltaTime);
 
-        if (_time >= 2)
+        if (_time >= 0.5)
         {
             Dammage = 2;
         }
 
-        if (_time >= 4) 
+        if (_time >= 1) 
         {
             Dammage = 1;
         }

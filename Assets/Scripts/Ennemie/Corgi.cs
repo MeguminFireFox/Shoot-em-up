@@ -28,7 +28,7 @@ public class Corgi : MonoBehaviour
             _position = true;
         }
 
-        if (_time >= 2)
+        if (_time >= 2.5f)
         {
             Instantiate(Bullet, Pointeur.position, transform.rotation);
 

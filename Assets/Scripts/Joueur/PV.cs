@@ -22,6 +22,8 @@ public class PV : MonoBehaviour
         SbireDogBeta followerDog = collision.GetComponent<SbireDogBeta>();
         Bouledogue bouledogue = collision.GetComponent<Bouledogue>();
         Balleennemi1 balleennemi1 = collision.GetComponent<Balleennemi1>();
+        Corgi corgi = collision.GetComponent<Corgi>();
+        Balleennemi2 balleennemi2 = collision.GetComponent<Balleennemi2>();
         
         if (pelotte != null)
         {
@@ -79,6 +81,30 @@ public class PV : MonoBehaviour
                 defensive.Hprotected -= balleennemi1.dammage;
             }
             Destroy(balleennemi1.gameObject);
+            Destroy(GameObject.Find("Shield(Clone)"));
+            Health = defensive.Hprotected;
+        }
+
+        if (corgi != null)
+        {
+            Health -= corgi.Degat;
+            if (defensive.Shieldisup == false)
+            {
+                defensive.Hprotected -= corgi.Degat;
+            }
+            Destroy(corgi.gameObject);
+            Destroy(GameObject.Find("Shield(Clone)"));
+            Health = defensive.Hprotected;
+        }
+
+        if (balleennemi2 != null)
+        {
+            Health -= balleennemi2.Dammage;
+            if (defensive.Shieldisup == false)
+            {
+                defensive.Hprotected -= balleennemi2.Dammage;
+            }
+            Destroy(balleennemi2.gameObject);
             Destroy(GameObject.Find("Shield(Clone)"));
             Health = defensive.Hprotected;
         }
