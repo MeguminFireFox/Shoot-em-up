@@ -6,7 +6,6 @@ public class Balle1 : MonoBehaviour
 {
     private float speed = 12;
     public float dammage = 1;
-    Pelotte ennemie1;
 
     void FixedUpdate()
     {
