@@ -29,7 +29,6 @@ public class Defensive : MonoBehaviour
     private void FixedUpdate()
     {
         _recharge += Time.deltaTime;
-        Debug.Log(_recharge);
         if (_recharge >= 15)
         {
             if (_isprotected == true)
