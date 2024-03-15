@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PV : MonoBehaviour
 {
     public float Health = 3;
+    [SerializeField] TMP_Text vieText;
 
     void FixedUpdate()
     {
+        vieText.text = ($"Health : {Health}");
+
         if (Health <= 0)
         {
             Destroy(gameObject);
