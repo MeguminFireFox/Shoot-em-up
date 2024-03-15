@@ -21,7 +21,13 @@ public class Balleennemi1 : MonoBehaviour
         {
             transform.Translate(Vector2.up * hauteur * Time.deltaTime);
         }
+
         transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+        if (_currenttime >= 5)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

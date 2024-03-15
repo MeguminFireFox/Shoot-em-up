@@ -1,19 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pelotte : MonoBehaviour
 {
     public float HP = 3;
-    private float speed = 4;
-    public GameObject explos;
-    public float degat = 1;
+    public GameObject Explos;
+    public float Degat = 1;
+
+    private float _speed = 4;
+    private float _time = 0;
 
     void FixedUpdate()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        _time += Time.deltaTime;
+        transform.Translate(Vector2.left * _speed * Time.deltaTime);
 
         if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (_time >= 20)
         {
             Destroy(gameObject);
         }
@@ -39,7 +45,7 @@ public class Pelotte : MonoBehaviour
         if (balle3 != null)
         {
             HP -= balle3.dammage;
-            GameObject go = Instantiate(explos, transform.position, transform.rotation);
+            GameObject go = Instantiate(Explos, transform.position, transform.rotation);
             Destroy(balle3.gameObject);
         }
         if (explosion != null)

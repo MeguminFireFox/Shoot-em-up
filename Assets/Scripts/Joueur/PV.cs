@@ -27,10 +27,10 @@ public class PV : MonoBehaviour
         
         if (pelotte != null)
         {
-            Health -= pelotte.degat;
+            Health -= pelotte.Degat;
             if (defensive.Shieldisup == false )
             {
-                defensive.Hprotected -= pelotte.degat;
+                defensive.Hprotected -= pelotte.Degat;
             }
             Destroy(pelotte.gameObject);
             Destroy(GameObject.Find("Shield(Clone)"));
