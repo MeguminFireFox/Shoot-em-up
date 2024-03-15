@@ -11,6 +11,11 @@ public class SbireDogBeta : MonoBehaviour
     public GameObject Explos;
     public GameObject Joueur;
 
+    void Start()
+    {
+        Joueur = GameObject.Find("NyanCat");
+    }
+
     void FixedUpdate()
     {
         _distance = Vector2.Distance(transform.position, Joueur.transform.position);
