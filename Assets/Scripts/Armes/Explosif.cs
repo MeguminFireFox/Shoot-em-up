@@ -17,6 +17,7 @@ public class Explosif : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         if (_effective == true)
         {
             currenttime += Time.deltaTime;
