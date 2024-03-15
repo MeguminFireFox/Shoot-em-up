@@ -13,6 +13,8 @@ public class Defensive : MonoBehaviour
     public float Hprotected;
     public GameObject Bouclier;
     public GameObject Joueur;
+    public GameObject ShieldReady;
+    public GameObject ShieldNotReady;
 
     public void Start()
     {
@@ -29,8 +31,12 @@ public class Defensive : MonoBehaviour
     private void FixedUpdate()
     {
         _recharge += Time.deltaTime;
+        ShieldReady.SetActive(false);
+        ShieldNotReady.SetActive(true);
         if (_recharge >= 15)
         {
+            ShieldReady.SetActive(true);
+            ShieldNotReady.SetActive(false);
             if (_isprotected == true)
             {
                 _recharge -= _recharge;
