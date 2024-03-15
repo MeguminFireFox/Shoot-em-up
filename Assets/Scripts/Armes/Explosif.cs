@@ -9,6 +9,13 @@ public class Explosif : MonoBehaviour
     public GameObject bullet;
     private bool _effective = false;
     private float currenttime = 0;
+    public AudioClip HissLong;
+    private AudioSource _audiosource;
+
+    private void Start()
+    {
+        _audiosource = GetComponent<AudioSource>();
+    }
 
     public void OnShoot(InputValue inputValue)
     {
@@ -23,6 +30,7 @@ public class Explosif : MonoBehaviour
             currenttime += Time.deltaTime;
             if (currenttime > 1.25f)
             {
+                _audiosource.PlayOneShot(HissLong);
                 GameObject go = Instantiate(bullet, pointeur.position, transform.rotation);
                 currenttime = 0;
             }
