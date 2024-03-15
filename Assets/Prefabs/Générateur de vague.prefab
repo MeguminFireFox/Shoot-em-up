@@ -47,4 +47,6 @@ MonoBehaviour:
   _time: 25
   Wave1: {fileID: 1920719106962407933, guid: 900464d615f983b40b8df17a5f32c4ea, type: 3}
   Wave2: {fileID: 2663995695325729631, guid: 714f793743d05be4689db34a2ba22a50, type: 3}
+  Wave3: {fileID: 1983008467701078141, guid: 0ad63242f3b91c2488437316c2fe8a13, type: 3}
+  Wave4: {fileID: 2190230893950743487, guid: 25d082d183c80cf42bd3e4f54064457f, type: 3}
   _wavechosing: 0

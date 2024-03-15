@@ -22,7 +22,7 @@ public class Shotgun : MonoBehaviour
             currenttime += Time.deltaTime;
             if (currenttime > 0.80f)
             {
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     Instantiate(Bullet, pointeur.position, transform.rotation);
                 }
