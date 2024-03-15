@@ -27,7 +27,7 @@ public class Générateurennemi : MonoBehaviour
 
         if (_wavechosing == 1)
         {
-            GameObject instantiated = Instantiate(Ennemi1);
+            GameObject instantiated = Instantiate(Ennemi1, gameObject.transform);
 
             instantiated.transform.position = new Vector2(
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
@@ -38,7 +38,7 @@ public class Générateurennemi : MonoBehaviour
 
         if (_wavechosing == 2)
         {
-            GameObject instantiated = Instantiate(Ennemi2);
+            GameObject instantiated = Instantiate(Ennemi2, gameObject.transform);
 
             instantiated.transform.position = new Vector2(
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
@@ -49,7 +49,7 @@ public class Générateurennemi : MonoBehaviour
 
         if (_wavechosing == 3)
         {
-            GameObject instantiated = Instantiate(Ennemi3);
+            GameObject instantiated = Instantiate(Ennemi3, gameObject.transform);
 
             instantiated.transform.position = new Vector2(
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
@@ -60,7 +60,7 @@ public class Générateurennemi : MonoBehaviour
 
         if (_wavechosing == 4)
         {
-            GameObject instantiated = Instantiate(Ennemi4);
+            GameObject instantiated = Instantiate(Ennemi4, gameObject.transform);
 
             instantiated.transform.position = new Vector2(
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
@@ -71,7 +71,7 @@ public class Générateurennemi : MonoBehaviour
 
         if (_wavechosing == 5)
         {
-            GameObject instantiated = Instantiate(Ennemi5);
+            GameObject instantiated = Instantiate(Ennemi5, gameObject.transform);
 
             instantiated.transform.position = new Vector2(
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
