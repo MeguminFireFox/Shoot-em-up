@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PV : MonoBehaviour
 {
     public float Health = 3;
     [SerializeField] TMP_Text vieText;
+    
 
     void FixedUpdate()
     {
