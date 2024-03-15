@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    private float _time = 300f;
+    private float _time = 180f;
     [SerializeField] TMP_Text TimerSetUp;
     public string Scene;
 

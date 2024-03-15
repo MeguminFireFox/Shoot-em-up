@@ -9,6 +9,13 @@ public class Shotgun : MonoBehaviour
     private float currenttime = 0;
     public GameObject Bullet;
     private bool _effective = false;
+    public AudioClip MeowMed;
+    private AudioSource _audiosource;
+
+    private void Start()
+    {
+        _audiosource = GetComponent<AudioSource>();
+    }
 
     public void OnShoot(InputValue inputValue)
     {
@@ -22,6 +29,7 @@ public class Shotgun : MonoBehaviour
             currenttime += Time.deltaTime;
             if (currenttime > 0.80f)
             {
+                _audiosource.PlayOneShot(MeowMed);
                 for (int i = 0; i < 4; i++)
                 {
                     Instantiate(Bullet, pointeur.position, transform.rotation);
