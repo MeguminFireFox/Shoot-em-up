@@ -18,7 +18,6 @@ public class SbireDog : MonoBehaviour
 
     void FixedUpdate()
     {
-
         _preptime += Time.deltaTime;
 
         if (_position == false)

@@ -5,17 +5,19 @@ using UnityEngine;
 public class Bouledogue : MonoBehaviour
 {
     public float HP = 3;
-    private float speed = 4;
+    private float speed = 2;
     public GameObject explos;
     public float degat = 1;
     public Transform pointeur;
     private float currenttime = 0;
     public GameObject Bullet;
+    private float _time = 0;
 
     void FixedUpdate()
     {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
         currenttime += Time.deltaTime;
+        _time += Time.deltaTime;
 
         if (currenttime > 2)
         {
@@ -27,6 +29,11 @@ public class Bouledogue : MonoBehaviour
         }
 
         if (HP <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (_time >= 25)
         {
             Destroy(gameObject);
         }
