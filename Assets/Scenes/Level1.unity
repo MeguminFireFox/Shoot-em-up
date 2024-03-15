@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerSetUp: {fileID: 1480548499}
-  Scene: Game_Over1
+  Scene: Win
 --- !u!1001 &243955775
 PrefabInstance:
   m_ObjectHideFlags: 0

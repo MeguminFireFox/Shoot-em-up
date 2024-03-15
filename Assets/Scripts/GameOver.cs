@@ -10,8 +10,11 @@ public class GameOver : MonoBehaviour
     public GameObject GameOverUI;
     public GameObject GameUI;
     private float _time;
+    
     private void FixedUpdate()
     {
+        TimeTotal timeTotal = GetComponent<TimeTotal>();
+
         if (GameObject.Find("NyanCat") == null)
         {
             _time += Time.deltaTime;
