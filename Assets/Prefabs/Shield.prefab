@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0, g: 0.18942857, b: 1, a: 0.48235294}
   m_FlipX: 0
@@ -97,5 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9ae4f4461dd1b48a6edf2d48b92020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shieldisup: 0
+  Hprotected: 0
   Bouclier: {fileID: 79487350961586860}
   Joueur: {fileID: 8114124228681308325, guid: 8a852192069a84c49834de11de42bc17, type: 3}
+  ShieldReady: {fileID: 0}
+  ShieldNotReady: {fileID: 0}

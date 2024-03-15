@@ -38,7 +38,7 @@ public class SbireDog : MonoBehaviour
 
             _direction = Joueur.transform.position - transform.position;
             _direction.Normalize();
-            _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg;
+            _angle = Mathf.Atan2(_direction.y, _direction.x) * Mathf.Rad2Deg - 180;
             transform.rotation = Quaternion.Euler(Vector3.forward * _angle);
         }
 
