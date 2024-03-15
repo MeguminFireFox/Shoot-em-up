@@ -15,11 +15,18 @@ public class SbireDog : MonoBehaviour
     public GameObject Joueur;
     private Vector2 _direction;
     public Rigidbody2D Rb2D;
+    private float _time = 0;
+    private float _waittime;
+
+    void Start()
+    {
+        _waittime = Random.Range(1, 6);
+
+        Joueur = GameObject.Find("NyanCat");
+    }
 
     void FixedUpdate()
     {
-        _preptime += Time.deltaTime;
-
         if (_position == false)
         {
             transform.Translate(Vector2.left * _speed * Time.deltaTime);
@@ -35,14 +42,20 @@ public class SbireDog : MonoBehaviour
             transform.rotation = Quaternion.Euler(Vector3.forward * _angle);
         }
 
-        if (_preptime >= 6 && _preptime<= 7)
+        if (_preptime >= _waittime && _preptime<= _waittime + 1)
         {
             Rb2D.AddForce(_direction * 0.5f,ForceMode2D.Impulse);
         }
 
-        if (_preptime >= 10)
+        if (_position == true)
         {
-            Destroy(gameObject);
+            _preptime += Time.deltaTime;
+            _time += Time.deltaTime;
+
+            if (_time >= 10)
+            {
+                Destroy(gameObject);
+            }
         }
 
         if (HP <= 0)

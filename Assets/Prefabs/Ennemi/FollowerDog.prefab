@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2969c56e85fce944bb125b78fe10c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 2
+  HP: 3
   Degat: 1
   Explos: {fileID: 2157928072674096875, guid: 37b12e20f7a958d4b83ab74175481800, type: 3}
   Joueur: {fileID: 8114124228681308325, guid: 8a852192069a84c49834de11de42bc17, type: 3}
