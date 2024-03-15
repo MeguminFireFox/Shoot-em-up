@@ -2700,7 +2700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7c50cd0129fc964892153359c639a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: Ambre
+  Scene: Rules
 --- !u!61 &2059037204
 BoxCollider2D:
   m_ObjectHideFlags: 0
