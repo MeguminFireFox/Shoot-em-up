@@ -30,7 +30,7 @@ public class Shotgun : MonoBehaviour
             if (currenttime > 0.80f)
             {
                 _audiosource.PlayOneShot(MeowMed);
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     Instantiate(Bullet, pointeur.position, transform.rotation);
                 }
