@@ -10,21 +10,20 @@ public class PlanetManager : MonoBehaviour
     private GameObject Planet2;
     [SerializeField]
     private GameObject Planet3;
-
     [SerializeField]
     private Vector2 zone;
 
-    private float Temps1 = 15;
-    private float Temps2 = 7.5f;
-    private float Temps3 = 0;
+    private float _temps1 = 15;
+    private float _temps2 = 7.5f;
+    private float _temps3 = 0;
 
     void Update()
     {
-        Temps1 += 1 * Time.deltaTime;
-        Temps2 += 1 * Time.deltaTime;
-        Temps3 += 1 * Time.deltaTime;
+        _temps1 += 1 * Time.deltaTime;
+        _temps2 += 1 * Time.deltaTime;
+        _temps3 += 1 * Time.deltaTime;
 
-        if (Temps1 >= 22.5f)
+        if (_temps1 >= 22.5f)
         {
             GameObject instantiated = Instantiate(Planet1);
 
@@ -32,10 +31,10 @@ public class PlanetManager : MonoBehaviour
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
                 Random.Range(transform.position.y - zone.y / 5, transform.position.y + zone.y / 5));
 
-            Temps1 = 0;
+            _temps1 = 0;
         }
 
-        if (Temps2 >= 22.5f)
+        if (_temps2 >= 22.5f)
         {
             GameObject instantiated = Instantiate(Planet2);
 
@@ -43,10 +42,10 @@ public class PlanetManager : MonoBehaviour
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
                 Random.Range(transform.position.y - zone.y / 5, transform.position.y + zone.y / 5));
 
-            Temps2 = 0;
+            _temps2 = 0;
         }
 
-        if (Temps3 >= 22.5f)
+        if (_temps3 >= 22.5f)
         {
             GameObject instantiated = Instantiate(Planet3);
 
@@ -54,7 +53,7 @@ public class PlanetManager : MonoBehaviour
                 Random.Range(transform.position.x - zone.x / 2.5f, transform.position.x + zone.x / 2.5f),
                 Random.Range(transform.position.y - zone.y / 5, transform.position.y + zone.y / 5));
 
-            Temps3 = 0;
+            _temps3 = 0;
         }
     }
 }

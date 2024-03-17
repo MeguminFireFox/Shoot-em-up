@@ -6,6 +6,9 @@ public class Générateurennemi : MonoBehaviour
 {
     private float _time = 0;
     private float _wavechosing = 0;
+    private float _currenttime = 0;
+    private float _acceleration = 2;
+
     public GameObject Ennemi1;
     public GameObject Ennemi2;
     public GameObject Ennemi3;
@@ -18,8 +21,34 @@ public class Générateurennemi : MonoBehaviour
     void Update()
     {
         _time += Time.deltaTime;
+        _currenttime = Time.deltaTime;
 
-        if (_time >= 2)
+        if (_currenttime >= 90 && _currenttime <= 100)
+        {
+            _acceleration = 1.5f;
+        }
+
+        if (_currenttime >= 180 && _currenttime <= 190)
+        {
+            _acceleration = 1;
+        }
+
+        if (_currenttime >= 300 && _currenttime <= 310)
+        {
+            _acceleration = 0.5f;
+        }
+
+        if (_currenttime >= 450 && _currenttime <= 460)
+        {
+            _acceleration = 0.25f;
+        }
+
+        if (_currenttime >= 600)
+        {
+            _acceleration = 0.125f;
+        }
+
+        if (_time >= _acceleration)
         {
             _wavechosing = Random.Range(1, 6);
             _time = 0;

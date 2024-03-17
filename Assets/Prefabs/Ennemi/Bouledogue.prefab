@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571105e5609b44445923dc33434c974f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 3
+  HP: 7
   explos: {fileID: 2157928072674096875, guid: 37b12e20f7a958d4b83ab74175481800, type: 3}
   degat: 1
   pointeur: {fileID: 8708853870590254339}

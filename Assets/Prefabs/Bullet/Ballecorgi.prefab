@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7304719847542095226}
   - component: {fileID: 9029766547116403284}
   - component: {fileID: 1644630665234071331}
-  - component: {fileID: -4985376935004271517}
+  - component: {fileID: 8778405991283247558}
   - component: {fileID: 3192356634905295276}
   m_Layer: 0
   m_Name: Ballecorgi
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &-4985376935004271517
+--- !u!61 &8778405991283247558
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,7 +157,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.73, y: 1.12}
   m_EdgeRadius: 0
 --- !u!114 &3192356634905295276
 MonoBehaviour:

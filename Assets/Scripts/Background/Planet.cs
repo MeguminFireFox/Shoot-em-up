@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    private float currenttime = 0;
-    private float speed = 3;
+    private float _currenttime = 0;
+    private float _speed = 3;
 
     void FixedUpdate()
     {
-        currenttime += Time.deltaTime;
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        _currenttime += Time.deltaTime;
+        transform.Translate(Vector2.left * _speed * Time.deltaTime);
 
-        if (currenttime > 30)
+        if (_currenttime > 30)
         {
             Destroy(gameObject);
         }

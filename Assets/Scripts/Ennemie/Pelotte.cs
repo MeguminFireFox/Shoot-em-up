@@ -9,6 +9,11 @@ public class Pelotte : MonoBehaviour
     private float _speed = 4;
     private float _time = 0;
 
+    void Start()
+    {
+        this.GetComponent<Renderer>().material.color = Color.HSVToRGB (Random.Range(0.1f,1f), Random.Range(0.1f, 1f), Random.Range(0.1f, 1f));
+    }
+
     void FixedUpdate()
     {
         _time += Time.deltaTime;

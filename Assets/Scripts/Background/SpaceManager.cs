@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class SpaceManager : MonoBehaviour
 {
-    private float currenttime = 0;
-    public GameObject space;
+    public GameObject Space;
+
+    private float _currenttime = 0;
 
     void Start()
     {
-        GameObject go = Instantiate(space, transform.position, transform.rotation);
+        GameObject go = Instantiate(Space, transform.position, transform.rotation);
     }
 
     void FixedUpdate()
     {
-        currenttime += Time.deltaTime;
-        if (currenttime > 22) 
+        _currenttime += Time.deltaTime;
+        if (_currenttime > 22) 
         {
-            GameObject go = Instantiate(space, transform.position, transform.rotation);
-            currenttime = 0;
+            GameObject go = Instantiate(Space, transform.position, transform.rotation);
+            _currenttime = 0;
         }
     }
 }

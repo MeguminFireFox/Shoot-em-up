@@ -21,7 +21,7 @@ public class SbireDogBeta : MonoBehaviour
         _distance = Vector2.Distance(transform.position, Joueur.transform.position);
         Vector2 direction = Joueur.transform.position - transform.position;
         direction.Normalize();
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180;
 
         transform.position = Vector2.MoveTowards(this.transform.position, Joueur.transform.position, _speed * Time.deltaTime);
         transform.rotation = Quaternion.Euler(Vector3.forward * angle);
