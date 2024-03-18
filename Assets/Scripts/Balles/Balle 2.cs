@@ -7,6 +7,7 @@ public class Balle2 : MonoBehaviour
     private float speed = 10;
     private float hauteur;
     public float dammage = 1;
+    private float _currenttime = 0;
 
     void Start()
     {
@@ -15,6 +16,13 @@ public class Balle2 : MonoBehaviour
 
     void FixedUpdate()
     {
+        _currenttime += Time.deltaTime;
+
+        if (_currenttime > 5)
+        {
+            Destroy(gameObject);
+        }
+
         transform.Translate(Vector2.right * speed * Time.deltaTime);
         transform.Translate(Vector2.up * hauteur * Time.deltaTime);
     }

@@ -96,14 +96,14 @@ GameObject:
   - component: {fileID: 1928170878775503743}
   - component: {fileID: 1188240107748690903}
   - component: {fileID: 1268623177688858128}
-  - component: {fileID: -7596797762205151129}
+  - component: {fileID: 2740806276496716618}
   - component: {fileID: 8696100858838747225}
   - component: {fileID: 8624132571990665786}
-  - component: {fileID: 1651863339062716311}
   - component: {fileID: 3461688067541511898}
   - component: {fileID: 7487188059728357735}
+  - component: {fileID: 5531955628272720997}
   m_Layer: 0
-  m_Name: NyanCat
+  m_Name: NyanCat 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 5d28d1155ba4a7441ab5a9aaa19555b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3268624a23afad64ea396c6f612ad35d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -236,7 +236,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0036513805, y: 0.047308058}
+  m_Offset: {x: -0.0036509037, y: 0.032755733}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -247,9 +247,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2578931, y: 1.0660365}
+  m_Size: {x: 1.3161044, y: 1.0951412}
   m_EdgeRadius: 0
---- !u!82 &-7596797762205151129
+--- !u!82 &2740806276496716618
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -423,24 +423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48041bdcdfb3b19408e92b8f237e5b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1651863339062716311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8114124228681308325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 854271fc0439d3e49bb3f0c4045c9ac0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pointeur: {fileID: 1353279340505710062}
-  Automatique: {fileID: 8050239135103986368, guid: b086ee92438b10746bdbfd79b2fcfbcc, type: 3}
-  Shotgun: {fileID: 8745455491764612058, guid: 9e1fe30d72237b74aa4f144a5e3ccbbd, type: 3}
-  Explosif: {fileID: 5017399129314813225, guid: 94cd07844bf102348bb5dc94d301a2e9, type: 3}
-  MeowMed: {fileID: 8300000, guid: 75e60524ca25a6f4887106982c71f2a6, type: 3}
-  HissLong: {fileID: 8300000, guid: 1ba52a547d671f741af95d2e63ba4558, type: 3}
 --- !u!114 &3461688067541511898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,3 +455,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   vieText: {fileID: 0}
+--- !u!114 &5531955628272720997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8114124228681308325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854271fc0439d3e49bb3f0c4045c9ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pointeur: {fileID: 1353279340505710062}
+  Automatique: {fileID: 8050239135103986368, guid: b086ee92438b10746bdbfd79b2fcfbcc, type: 3}
+  Shotgun: {fileID: 8745455491764612058, guid: 9e1fe30d72237b74aa4f144a5e3ccbbd, type: 3}
+  Explosif: {fileID: 5017399129314813225, guid: 94cd07844bf102348bb5dc94d301a2e9, type: 3}
+  MeowMed: {fileID: 8300000, guid: 75e60524ca25a6f4887106982c71f2a6, type: 3}
+  HissLong: {fileID: 8300000, guid: 1ba52a547d671f741af95d2e63ba4558, type: 3}

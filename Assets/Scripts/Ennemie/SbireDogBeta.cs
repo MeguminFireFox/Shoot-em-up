@@ -8,16 +8,43 @@ public class SbireDogBeta : MonoBehaviour
     private float _speed = 3;
     public float Degat = 1;
     private float _distance;
+    private float _choix = 0;
     public GameObject Explos;
     public GameObject Joueur;
 
     void Start()
     {
-        Joueur = GameObject.Find("NyanCat");
+        if (GameObject.Find("NyanCat") != null)
+        {
+            if (GameObject.Find("NyanCat 1") != null)
+            {
+                _choix = Random.Range(1, 3);
+            }
+
+            else
+            {
+                _choix = 1;
+            }
+        }
+        
+        else
+        {
+            _choix = 2;
+        }
     }
 
     void FixedUpdate()
     {
+        if (_choix == 1)
+        {
+            Joueur = GameObject.Find("NyanCat");
+        }
+
+        if (_choix == 2)
+        {
+            Joueur = GameObject.Find("NyanCat 1");
+        }
+
         _distance = Vector2.Distance(transform.position, Joueur.transform.position);
         Vector2 direction = Joueur.transform.position - transform.position;
         direction.Normalize();

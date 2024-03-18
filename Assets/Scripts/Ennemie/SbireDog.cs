@@ -11,6 +11,7 @@ public class SbireDog : MonoBehaviour
     private float _preptime;
     private float _angle;
     private bool _position = false;
+    private float _choix = 0;
     public GameObject Explos;
     public GameObject Joueur;
     private Vector2 _direction;
@@ -22,11 +23,37 @@ public class SbireDog : MonoBehaviour
     {
         _waittime = Random.Range(1, 6);
 
-        Joueur = GameObject.Find("NyanCat");
+        if (GameObject.Find("NyanCat") != null)
+        {
+            if (GameObject.Find("NyanCat 1") != null)
+            {
+                _choix = Random.Range(1, 3);
+            }
+
+            else
+            {
+                _choix = 1;
+            }
+        }
+
+        else
+        {
+            _choix = 2;
+        }
     }
 
     void FixedUpdate()
     {
+        if (_choix == 1)
+        {
+            Joueur = GameObject.Find("NyanCat");
+        }
+
+        if (_choix == 2)
+        {
+            Joueur = GameObject.Find("NyanCat 1");
+        }
+
         if (_position == false)
         {
             transform.Translate(Vector2.left * _speed * Time.deltaTime);

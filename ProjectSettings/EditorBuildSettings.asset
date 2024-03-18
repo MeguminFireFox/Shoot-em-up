@@ -15,18 +15,36 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelChoices.unity
     guid: e8bb2cc814b2aad41a11bd3b07290ee7
   - enabled: 1
+    path: Assets/Scenes/LevelChoices 1.unity
+    guid: fff95ecd92231e646b0cd6d750b32a17
+  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level1 1.unity
+    guid: deb14d5931f53244496edc6013c9846d
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: fb0b4f3c1ffd77a4783921e234544396
   - enabled: 1
+    path: Assets/Scenes/Level2 1.unity
+    guid: 9e61dca457c93b248b6865ed3b9baa7f
+  - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: 5ecb18b373eb74642a2604bf9665d5c3
+  - enabled: 1
+    path: Assets/Scenes/Win 1.unity
+    guid: 74b2424d2ccb67d408fe0f0b3e2915e2
   - enabled: 1
     path: Assets/Scenes/Game_Over1.unity
     guid: e91fe4ab70345734691c5a5f1b8ca919
   - enabled: 1
+    path: Assets/Scenes/Game_Over1 1.unity
+    guid: d457ecfaac456d9418c7bd6b00b3d09b
+  - enabled: 1
     path: Assets/Scenes/Game_Over2.unity
     guid: 1a8eb1785a4ebd4429a993dc4eab4177
+  - enabled: 1
+    path: Assets/Scenes/Game_Over2 1.unity
+    guid: 3cf7f15e7c93e3c4985645002cf5e77f
   m_configObjects: {}
